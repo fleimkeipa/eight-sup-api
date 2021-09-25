@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/adem522/eight-sup/models"
-	"github.com/adem522/eight-sup/pkg/db"
+	"github.com/fleimkeipa/eight-sup-api/models"
+	"github.com/fleimkeipa/eight-sup-api/pkg/db"
 	"github.com/labstack/echo"
 )
 

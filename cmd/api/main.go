@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/adem522/eight-sup/cmd/handlers"
-	"github.com/adem522/eight-sup/pkg/utils"
+	"github.com/fleimkeipa/eight-sup-api/cmd/handlers"
+	"github.com/fleimkeipa/eight-sup-api/pkg/utils"
 
 	"github.com/labstack/echo"
 )

@@ -3,8 +3,8 @@ package db
 import (
 	"testing"
 
-	"github.com/adem522/eight-sup/models"
-	"github.com/adem522/eight-sup/pkg/utils"
+	"github.com/fleimkeipa/eight-sup-api/models"
+	"github.com/fleimkeipa/eight-sup-api/pkg/utils"
 )
 
 func BenchmarkCreateEvent(b *testing.B) {

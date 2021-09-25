@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/adem522/eight-sup/models"
+	"github.com/fleimkeipa/eight-sup-api/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
