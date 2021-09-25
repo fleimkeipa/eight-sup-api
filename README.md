@@ -3,6 +3,7 @@
 
 Download:
 ```shell
+go mod init github.com/fleimkeipa/eight-sup
 go get 
 ```
 
