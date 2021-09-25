@@ -3,7 +3,7 @@
 
 Download:
 ```shell
-go get mongoDeneme/backend
+go get 
 ```
 
 If you do not have the go command on your system, you need to [Install Go](http://golang.org/doc/install) first
