@@ -18,6 +18,8 @@ func checkClient(collectionUser *mongo.Collection, event *models.Event, chan1 ch
 		context.TODO(),
 		bson.M{
 			"username": event.BuyerUsername,
+			"username": event.BuyerUsername,
+			"username": event.BuyerUsername,
 		}, opt,
 	).Decode(&filter)
 	if filter.Plan != nil {
