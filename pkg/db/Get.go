@@ -65,7 +65,8 @@ func ReturnAllItemsForClient(collection *mongo.Collection, want *models.Want) (i
 func ReturnAllItemsForStreamer(collection *mongo.Collection, want *models.Want) (interface{}, error) {
 	temp := []models.UserStruct{}
 	filterCursor, err := collection.Find(context.TODO(), bson.M{
-		"username": want.SellerUsername,
+		//"username": want.SellerUsername,
+		"username": bson.M{"$eq":want.SellerUsername},
 		//"plan.package.items.buyerUsername": want.SellerUsername,
 	})
 	if err != nil {
