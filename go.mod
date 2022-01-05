@@ -6,7 +6,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/joho/godotenv v1.4.0
 	github.com/labstack/echo v3.3.10+incompatible
-	go.mongodb.org/mongo-driver v1.8.1
+	go.mongodb.org/mongo-driver v1.8.2
 )
 
 require (
