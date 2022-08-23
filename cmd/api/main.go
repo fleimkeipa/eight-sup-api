@@ -6,7 +6,7 @@ import (
 	"github.com/fleimkeipa/eight-sup-api/cmd/handlers"
 	"github.com/fleimkeipa/eight-sup-api/pkg/utils"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 func main() {

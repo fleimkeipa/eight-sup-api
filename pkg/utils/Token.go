@@ -7,7 +7,7 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/fleimkeipa/eight-sup-api/models"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 func CreateToken(user models.UserStruct) string {

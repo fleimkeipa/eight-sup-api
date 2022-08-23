@@ -5,7 +5,7 @@ import (
 
 	"github.com/fleimkeipa/eight-sup-api/models"
 	"github.com/fleimkeipa/eight-sup-api/pkg/db"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

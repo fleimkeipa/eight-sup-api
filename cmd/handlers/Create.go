@@ -8,7 +8,7 @@ import (
 	"github.com/fleimkeipa/eight-sup-api/models"
 	"github.com/fleimkeipa/eight-sup-api/pkg/db"
 	"github.com/fleimkeipa/eight-sup-api/pkg/utils"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 func (col *Collection) CreateEvent(c echo.Context) error {

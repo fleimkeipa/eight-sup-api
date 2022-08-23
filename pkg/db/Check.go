@@ -17,7 +17,7 @@ func checkClient(collectionUser *mongo.Collection, event *models.Event, chan1 ch
 	collectionUser.FindOne(
 		context.TODO(),
 		bson.M{
-			"username": bson.M{"$eq":event.BuyerUsername},
+			"username": bson.M{"$eq": event.BuyerUsername},
 		}, opt,
 	).Decode(&filter)
 	if filter.Plan != nil {
@@ -37,7 +37,7 @@ func checkStreamer(collectionUser *mongo.Collection, event *models.Event, chan1 
 	collectionUser.FindOne(
 		context.TODO(),
 		bson.M{
-			"username": bson.M{"$eq":event.SellerUsername},
+			"username": bson.M{"$eq": event.SellerUsername},
 			"type":     "streamer",
 		},
 		options.FindOne().SetProjection(bson.M{"plan.package.items": 0}),
@@ -57,7 +57,7 @@ func pushStreamer(collectionUser *mongo.Collection, event *models.Event) error {
 	_, err := collectionUser.UpdateOne(
 		context.TODO(),
 		bson.M{
-			"username":            bson.M{"$eq":event.SellerUsername},
+			"username":            bson.M{"$eq": event.SellerUsername},
 			"plan.package.unique": event.Unique,
 		},
 		bson.D{
@@ -80,12 +80,12 @@ func pushClient(collection *mongo.Collection, event *models.Event) error {
 			Stock:  1,
 			Items:  event.Items,
 		},
-		SellerUsername: bson.M{"$eq":event.SellerUsername},
+		SellerUsername: event.SellerUsername,
 	}
 	_, err := collection.UpdateOne(
 		context.TODO(),
 		bson.M{
-			"username": bson.M{"$eq":event.SellerUsername},
+			"username": bson.M{"$eq": event.SellerUsername},
 		},
 		bson.D{
 			{Key: "$push", Value: bson.D{
@@ -106,8 +106,8 @@ func LoginCheck(Username, Password string, col *mongo.Collection) string {
 		"plan": 0,
 	})
 	col.FindOne(context.TODO(), bson.M{
-		"username": bson.M{"$eq":Username},
-		"password": bson.M{"$eq":Password},
+		"username": bson.M{"$eq": Username},
+		"password": bson.M{"$eq": Password},
 	}, opt).Decode(&result)
 	if result == nil {
 		return ""
@@ -121,8 +121,8 @@ func checkPlan(u *models.UserStructAddPlan, collection *mongo.Collection) bool {
 	collection.FindOne(
 		context.TODO(),
 		bson.M{
-			"username":            bson.M{"$eq":u.Username},
-			"plan.package.unique": bson.M{"$eq":u.Unique},
+			"username":            bson.M{"$eq": u.Username},
+			"plan.package.unique": bson.M{"$eq": u.Unique},
 		}, opt,
 	).Decode(&filter)
 	return filter.Plan != nil
