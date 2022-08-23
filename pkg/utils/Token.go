@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/dgrijalva/jwt-go"
 	"github.com/fleimkeipa/eight-sup-api/models"
+	"github.com/golang-jwt/jwt"
 	"github.com/labstack/echo/v4"
 )
 
