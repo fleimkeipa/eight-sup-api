@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/joho/godotenv v1.4.0
-	github.com/labstack/echo/v4 v4.8.0
+	github.com/labstack/echo/v4 v4.9.0
 	go.mongodb.org/mongo-driver v1.10.1
 )
 
